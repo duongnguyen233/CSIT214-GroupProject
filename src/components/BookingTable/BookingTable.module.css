@@ -1,0 +1,38 @@
+/* BookingTable.module.css */
+
+.bookingTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1em;
+  font-family: 'Arial', sans-serif;
+  text-align: left;
+}
+
+.bookingTable thead tr {
+  background-color: #f2f2f2;
+  color: #333;
+  text-align: left;
+  font-weight: bold;
+}
+
+.bookingTable th, .bookingTable td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.bookingTable tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.bookingTable tbody tr {
+  background-color: #f9f9f9;
+}
+
+.bookingTable tbody tr:last-of-type {
+  border-bottom: 2px solid #7F3FFC;
+}
+
+.bookingTable tbody tr:hover {
+  background-color: #f1f1f1;
+}
