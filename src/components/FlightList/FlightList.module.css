@@ -1,0 +1,69 @@
+/* src/components/FlightList/FlightList.module.css */
+.flightList {
+  padding: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+.section {
+  position: relative;
+  height: 100vh;
+  background-image: url('/background.jpg');
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #4fa3e3;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f4f4f4;
+  color: #191a1e;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.selectBtn {
+  background-color: #4fa3e3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.selectBtn:hover {
+  background-color: #3a8ac1;
+}
+
+.sectionCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  background: #fff;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 45px 25px 25px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.8);
+}

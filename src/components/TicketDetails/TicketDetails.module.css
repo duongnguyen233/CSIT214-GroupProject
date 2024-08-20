@@ -1,0 +1,101 @@
+/* General Styles */
+.ticketDetails {
+  padding: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+.section {
+  position: relative;
+  height: 100vh;
+  background-image: url('/background.jpg');
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #4fa3e3;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #4fa3e3;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #191a1e;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #191a1e;
+}
+
+/* Flight Information Table Styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f4f4f4;
+  color: #191a1e;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* In-Flight Services Section Styles */
+.services {
+  margin-top: 20px;
+}
+
+.service {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+  margin-top: 0;
+  color: #4fa3e3;
+}
+
+.service p {
+  margin-bottom: 0;
+  color: #191a1e;
+}
+
+
+.sectionCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  background: #fff;
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  padding: 45px 25px 25px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.8);
+}

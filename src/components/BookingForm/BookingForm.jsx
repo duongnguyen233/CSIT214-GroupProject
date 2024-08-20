@@ -1,7 +1,14 @@
 import React from 'react';
 import styles from './BookingForm.module.css';
+import { useNavigate } from 'react-router-dom';
 
-export const BookingForm = () => {
+const BookingForm = () => {
+  const navigate = useNavigate();
+
+  const handleShowFlights = () => {
+    navigate('/flights');
+  };
+
   return (
     <div id="booking" className={styles.section}>
       <div className={styles.sectionCenter}>
@@ -15,20 +22,16 @@ export const BookingForm = () => {
             </div>
             <div className={`${styles.colMd7} ${styles.colMdOffset1}`}>
               <div className={styles.bookingForm}>
-                <form>
+                <form onSubmit={handleShowFlights}>
                   <div className={styles.formGroup}>
                     <div className={styles.formCheckbox}>
                       <label htmlFor="roundtrip">
-                        <input type="radio" id="roundtrip" name="flight-type" />
+                        <input type="radio" id="roundtrip" name="flight-type" defaultChecked/>
                         <span></span>Roundtrip
                       </label>
                       <label htmlFor="one-way">
                         <input type="radio" id="one-way" name="flight-type" />
                         <span></span>One way
-                      </label>
-                      <label htmlFor="multi-city">
-                        <input type="radio" id="multi-city" name="flight-type" />
-                        <span></span>Multi-City
                       </label>
                     </div>
                   </div>
@@ -107,3 +110,5 @@ export const BookingForm = () => {
     </div>
   );
 };
+
+export default BookingForm;
