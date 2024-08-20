@@ -10,7 +10,7 @@ export const BookingForm = () => {
             <div className={styles.colMd4}>
               <div className={styles.bookingCta}>
                 <h1>Book your flight today</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laboriosam numquam at</p>
+                <p>ly Smart, Book Easy – Your Journey Starts Here!</p>
               </div>
             </div>
             <div className={`${styles.colMd7} ${styles.colMdOffset1}`}>
