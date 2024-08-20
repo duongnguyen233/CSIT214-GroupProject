@@ -1,0 +1,211 @@
+/* General Section Styles */
+.section {
+  position: relative;
+  height: 100vh;
+  background-image: url('assets/background.jpg');
+}
+
+.sectionCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.colMd4 {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+
+.colMd6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.colMd7 {
+  flex: 0 0 58.333%;
+  max-width: 58.333%;
+}
+
+.colMdOffset1 {
+  margin-left: 8.333%;
+}
+
+/* Booking Styles */
+#booking {
+  font-family: 'Lato', sans-serif;
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #191a1e;
+}
+
+/* Booking Form Styles */
+.bookingForm {
+  position: relative;
+
+  background: #fff;
+  max-width: 642px;
+  width: 100%;
+  margin: auto;
+  padding: 45px 25px 25px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.formGroup {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.formControl {
+  background-color: #fff;
+  height: 65px;
+  padding: 0 15px;
+  padding-top: 24px;
+  color: #191a1e;
+  border: 2px solid #dfe5e9;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: none;
+  border-radius: 4px;
+  transition: 0.2s all;
+  max-width: 200px;
+  width: 100%;
+}
+
+.formControl::placeholder {
+  color: #dfe5e9;
+}
+
+.formControl:focus {
+  background: #f9fafb;
+}
+
+.formControl[type="date"]:invalid {
+  color: #dfe5e9;
+}
+
+.selectArrow {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  width: 32px;
+  line-height: 32px;
+  height: 32px;
+  text-align: center;
+  pointer-events: none;
+  color: #dfe5e9;
+  font-size: 14px;
+}
+
+.selectArrow::after {
+  content: '\279C';
+  display: block;
+  transform: rotate(90deg);
+}
+
+.formLabel {
+  position: absolute;
+  top: 6px;
+  left: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 24px;
+  height: 24px;
+  font-size: 12px;
+  color: #98c9ee;
+}
+
+.formCheckbox input {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+
+.formCheckbox label {
+  position: relative;
+  padding-top: 4px;
+  padding-left: 30px;
+  font-weight: 700;
+  color: #191a1e;
+}
+
+.formCheckbox label + label {
+  margin-left: 15px;
+}
+
+.formCheckbox input + span {
+  position: absolute;
+  left: 2px;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 2px solid #dfe5e9;
+  border-radius: 50%;
+}
+
+.formCheckbox input + span::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: #4fa3e3;
+  transform: translate(-50%, -50%);
+  transition: 0.2s all;
+}
+
+.formCheckbox input:not(:checked) + span::after {
+  opacity: 0;
+}
+
+.formCheckbox input:checked + span::after {
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+}
+
+.submitBtn {
+  color: #fff;
+  background-color: #4fa3e3;
+  font-weight: 400;
+  height: 65px;
+  font-size: 18px;
+  border: none;
+  width: 100%;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+/* Booking CTA Styles */
+.bookingCta {
+  margin-top: 45px;
+}
+
+.bookingCta h1 {
+  font-size: 52px;
+  text-transform: uppercase;
+  color: #4fa3e3;
+  font-weight: 400;
+}
+
+.bookingCta p {
+  font-size: 22px;
+  color: #191a1e;
+}
+
