@@ -1,7 +1,7 @@
 .section {
   position: relative;
   height: 100vh;
-  background-image: url('/SeatSelection.png');
+  background-image: url('/background.jpg');
 }
 
 h1 {
@@ -22,22 +22,25 @@ h1 {
 .plane {
   display: inline-block;
   margin-bottom: 20px;
+  background-image: url('/SeatSelection.png');
+  width: 497px;
+  object-fit: cover;
 }
 
 .row {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .space {
-  width: 20px; /* Space between seat groups */
+  width: 52px; /* Space between seat groups */
 }
 
 .seat {
   width: 40px;
-  height: 40px;
-  margin: 5px;
+  height: 45px;
+  margin: 15px;
   border-radius: 6px;
   background-color: #ddd;
   border: none;
