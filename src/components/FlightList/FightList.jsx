@@ -13,8 +13,12 @@ const FlightList = () => {
     // Add more flights as needed
   ];
 
+  // const handleSelect = (flight) => {
+  //   navigate('/ticket-details', { state: { flight } });
+  // };
+
   const handleSelect = (flight) => {
-    navigate('/ticket-details', { state: { flight } });
+    navigate('/select-seat', { state: { flight } });
   };
 
   return (

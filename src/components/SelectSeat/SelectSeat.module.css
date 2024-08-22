@@ -1,0 +1,68 @@
+.section {
+  position: relative;
+  height: 100vh;
+  background-image: url('SeatSelection.png');
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #4fa3e3;
+}
+
+.sectionCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.plane {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.space {
+  width: 20px; /* Space between seat groups */
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 6px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.seat:hover {
+  background-color: #ccc;
+}
+
+.selected {
+  background-color: #4fa3e3;
+  color: #fff;
+}
+
+.confirmBtn {
+  background-color: #4fa3e3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirmBtn:hover {
+  background-color: #3a8ac1;
+}
