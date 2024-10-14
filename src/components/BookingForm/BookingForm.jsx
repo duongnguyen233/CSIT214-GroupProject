@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './BookingForm.module.css';
 import { useNavigate } from 'react-router-dom';
 
 const BookingForm = () => {
+  const [isRoundTrip, setIsRoundTrip] = useState(true);
   const navigate = useNavigate();
 
-  const handleShowFlights = () => {
+  const handleShowFlights = (event) => {
+    event.preventDefault();
     navigate('/flights');
+  };
+
+  const handleFlightTypeChange = (event) => {
+    setIsRoundTrip(event.target.id === 'roundtrip');
   };
 
   return (
@@ -17,7 +23,7 @@ const BookingForm = () => {
             <div className={styles.colMd4}>
               <div className={styles.bookingCta}>
                 <h1>Book your flight today</h1>
-                <p>ly Smart, Book Easy – Your Journey Starts Here!</p>
+                <p>Fly Smart, Book Easy – Your Journey Starts Here!</p>
               </div>
             </div>
             <div className={`${styles.colMd7} ${styles.colMdOffset1}`}>
@@ -26,11 +32,22 @@ const BookingForm = () => {
                   <div className={styles.formGroup}>
                     <div className={styles.formCheckbox}>
                       <label htmlFor="roundtrip">
-                        <input type="radio" id="roundtrip" name="flight-type" defaultChecked/>
+                        <input
+                          type="radio"
+                          id="roundtrip"
+                          name="flight-type"
+                          defaultChecked
+                          onChange={handleFlightTypeChange}
+                        />
                         <span></span>Roundtrip
                       </label>
                       <label htmlFor="one-way">
-                        <input type="radio" id="one-way" name="flight-type" />
+                        <input
+                          type="radio"
+                          id="one-way"
+                          name="flight-type"
+                          onChange={handleFlightTypeChange}
+                        />
                         <span></span>One way
                       </label>
                     </div>
@@ -62,12 +79,14 @@ const BookingForm = () => {
                         <input className={styles.formControl} type="date" required />
                       </div>
                     </div>
-                    <div className={styles.colMd6}>
-                      <div className={styles.formGroup}>
-                        <span className={styles.formLabel}>Returning</span>
-                        <input className={styles.formControl} type="date" required />
+                    {isRoundTrip && (
+                      <div className={styles.colMd6}>
+                        <div className={styles.formGroup}>
+                          <span className={styles.formLabel}>Returning</span>
+                          <input className={styles.formControl} type="date" required />
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                   <div className={styles.row}>
                     <div className={styles.colMd4}>
