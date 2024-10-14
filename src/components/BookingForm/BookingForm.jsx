@@ -39,13 +39,19 @@ const BookingForm = () => {
                     <div className={styles.colMd6}>
                       <div className={styles.formGroup}>
                         <span className={styles.formLabel}>Flying from</span>
-                        <input className={styles.formControl} type="text" placeholder="City or airport" />
+                        <select className={styles.formControl}>
+                          <option>Melbourne (MEL)</option>
+                          <option>Sydney (SYD)</option>
+                        </select>
                       </div>
                     </div>
                     <div className={styles.colMd6}>
                       <div className={styles.formGroup}>
                         <span className={styles.formLabel}>Flying to</span>
-                        <input className={styles.formControl} type="text" placeholder="City or airport" />
+                        <select className={styles.formControl}>
+                          <option>Sydney (SYD)</option>
+                          <option>Melbourne (MEL)</option>
+                        </select>
                       </div>
                     </div>
                   </div>

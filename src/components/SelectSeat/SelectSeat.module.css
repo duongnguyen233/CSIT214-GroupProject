@@ -22,7 +22,6 @@ h1 {
 .plane {
   display: inline-block;
   margin-bottom: 20px;
-  background-image: url('/SeatSelection.png');
   width: 497px;
   object-fit: cover;
 }
@@ -68,4 +67,23 @@ h1 {
 
 .confirmBtn:hover {
   background-color: #3a8ac1;
+}
+
+.selectedInfo {
+  background-color: rgba(249, 249, 249, 0.5);
+  padding: 16px;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 18px;
+  color: red; /* Make the text red */
+}
+
+.selectedInfo p {
+  margin: 8px 0;
+}
+
+.selectedInfo p span {
+  font-weight: bold;
+  color: red; /* Make important text red and bold */
 }

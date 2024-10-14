@@ -8,14 +8,11 @@ const FlightList = () => {
 
   // Sample flight data
   const flights = [
-    { id: 1, from: 'City A', to: 'City B', date: '2024-08-25', time: '08:00 AM', price: '$250' },
-    { id: 2, from: 'City C', to: 'City D', date: '2024-08-26', time: '02:00 PM', price: '$300' },
+    { id: 1, from: 'Melbourne', to: 'Sydney', date: '2024-10-31', time: '08:00 AM', price: 250 },
+    { id: 2, from: 'Melbourne', to: 'Sydney', date: '2024-10-31', time: '02:00 PM', price: 300 },
+    { id: 3, from: 'Melbourne', to: 'Sydney', date: '2024-10-31', time: '07:00 PM', price: 270 },
     // Add more flights as needed
   ];
-
-  // const handleSelect = (flight) => {
-  //   navigate('/ticket-details', { state: { flight } });
-  // };
 
   const handleSelect = (flight) => {
     navigate('/select-seat', { state: { flight } });
@@ -44,7 +41,7 @@ const FlightList = () => {
                   <td>{flight.to}</td>
                   <td>{flight.date}</td>
                   <td>{flight.time}</td>
-                  <td>{flight.price}</td>
+                  <td>${flight.price}</td>
                   <td>
                     <button className={styles.selectBtn} onClick={() => handleSelect(flight)}>
                       Select
