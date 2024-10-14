@@ -14,8 +14,15 @@ const SelectSeat = () => {
 
   // Seat prices (for example, front rows are more expensive)
   const seatPrices = Array.from({ length: rows }).map((_, rowIndex) =>
-    Array.from({ length: columns }).map((_, colIndex) => rowIndex < 3 ? 15 : 0)
+    Array.from({ length: columns }).map((_, colIndex) => (rowIndex < 3 ? 15 : 0))
   );
+
+  // Disabled seats (Row 2 Seat E, Row 5 Seat C, Row 10 Seat E)
+  const disabledSeats = [
+    { row: 1, col: 4 }, // Row 2, Seat E (0-indexed)
+    { row: 4, col: 2 }, // Row 5, Seat C (0-indexed)
+    { row: 9, col: 4 }, // Row 10, Seat E (0-indexed)
+  ];
 
   // Manage selected seat and total price
   const [selectedSeat, setSelectedSeat] = useState(null);
@@ -35,6 +42,10 @@ const SelectSeat = () => {
     } else {
       alert('Please select a seat.');
     }
+  };
+
+  const isSeatDisabled = (row, col) => {
+    return disabledSeats.some(seat => seat.row === row && seat.col === col);
   };
 
   return (
@@ -58,8 +69,13 @@ const SelectSeat = () => {
                   <button
                     className={`${styles.seat} ${
                       selectedSeat?.row === rowIndex && selectedSeat?.col === colIndex ? styles.selected : ''
-                    }`}
-                    onClick={() => handleSeatSelect(rowIndex, colIndex)}
+                    } ${isSeatDisabled(rowIndex, colIndex) ? styles.disabled : ''}`} // Add disabled class
+                    onClick={() => {
+                      if (!isSeatDisabled(rowIndex, colIndex)) { // Prevent selection if disabled
+                        handleSeatSelect(rowIndex, colIndex);
+                      }
+                    }}
+                    disabled={isSeatDisabled(rowIndex, colIndex)} // Disable the button
                   >
                     {rowIndex + 1}{String.fromCharCode(65 + colIndex)}
                   </button>
